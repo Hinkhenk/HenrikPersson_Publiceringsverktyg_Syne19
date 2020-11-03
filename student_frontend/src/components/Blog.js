@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { BlogArticle, BlogCard, BlogFooter, BlogImage} from "../elements"
+import { BlogArticle, BlogCard, BlogFooter, BlogImage } from "../elements"
 
 const Blog = ({ id, title, image, date, category, slug, desc }) => {
   return (

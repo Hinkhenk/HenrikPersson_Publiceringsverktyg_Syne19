@@ -37,7 +37,9 @@ const Hero = () => {
             <HeroUnderline>
               <h4>Studerar till Systemutvecklare inom .Net</h4>- Lär mig
               react/react native och c# främst
-              <Button href="/contact">Kontakta mig</Button>
+              <Button href="/contact">
+                Kontakta mig
+              </Button>
             </HeroUnderline>
           </div>
         </HeroInfo>

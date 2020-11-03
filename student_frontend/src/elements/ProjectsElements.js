@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { FaShareSquare } from "react-icons/fa"
 
 export const ProjectsSection = styled.section`
   padding: 5rem 0;

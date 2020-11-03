@@ -66,7 +66,7 @@ export const JobInfo = styled.article`
 export const JobDate = styled.p`
   letter-spacing: ${props => props.theme.spacing};
 `
-export const JobsDesc = styled.div`
+export const JobDesc = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 2rem;

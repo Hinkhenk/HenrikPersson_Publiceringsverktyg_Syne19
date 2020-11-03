@@ -5,6 +5,7 @@ const Title = ({ title }) => {
   return (
     <TitleWrapper>
       <h2>{title || "default title"}</h2>
+      <div></div>
     </TitleWrapper>
   )
 }

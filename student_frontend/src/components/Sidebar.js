@@ -2,15 +2,15 @@ import React from "react"
 import Links from "../constants/links"
 import SocialLinks from "../constants/socialLinks"
 import { FaTimes } from "react-icons/fa"
-import {SidebarWrapper, SidebarContainer, Button} from "../elements"
+import {SidebarWrapper, SidebarContainer,} from "../elements"
 
 //Component for opening and closing the sidebar
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <SidebarWrapper isOpen={isOpen}>
-      <Button onClick={toggleSidebar}>
+      <button onClick={toggleSidebar}>
         <FaTimes />
-      </Button>
+      </button>
       <SidebarContainer>
         <Links sidebar={isOpen}/>
         <SocialLinks linkstyle="sidebar"/>

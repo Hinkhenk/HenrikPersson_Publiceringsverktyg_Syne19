@@ -3,6 +3,7 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
+import { BlogPageWrapper } from "../elements"
 
 //The blog page
 export const Blog = ({
@@ -13,7 +14,9 @@ export const Blog = ({
   return (
     <Layout>
       <SEO title="Bloggen" description="Bloggsidan" />
+      <BlogPageWrapper>
         <Blogs blogs={blogs} title="Alla artiklar" />
+      </BlogPageWrapper>
     </Layout>
   )
 }

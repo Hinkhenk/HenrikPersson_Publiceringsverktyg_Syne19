@@ -2,7 +2,16 @@ import React from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import {ButtonContainer, JobsWrapper, JobsCenter, JobButton, JobInfo, JobDate, JobsDesc, CenterButton} from "../elements"
+import {
+  ButtonContainer,
+  JobsWrapper,
+  JobsCenter,
+  JobButton,
+  JobInfo,
+  JobDate,
+  JobDesc,
+  CenterButton,
+} from "../elements"
 
 const query = graphql`
   {
@@ -54,17 +63,15 @@ const Jobs = () => {
           <JobDate>{date}</JobDate>
           {desc.map(item => {
             return (
-              <JobsDesc key={item.id}>
-                <FaAngleDoubleRight classname="job-icon"/>
+              <JobDesc key={item.id}>
+                <FaAngleDoubleRight classname="job-icon" />
                 <p>{item.name}</p>
-              </JobsDesc>
+              </JobDesc>
             )
           })}
         </JobInfo>
       </JobsCenter>
-      <CenterButton href="/about">
-        Mitt CV
-      </CenterButton>
+      <CenterButton href="/about">Mitt CV</CenterButton>
     </JobsWrapper>
   )
 }

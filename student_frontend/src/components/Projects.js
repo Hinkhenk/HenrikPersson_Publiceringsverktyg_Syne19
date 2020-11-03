@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "./Title"
 import Project from "./Project"
-import {ProjectsSection, ProjectsCenter, CenterButton} from "../elements"
+import { ProjectsSection, ProjectsCenter, CenterButton } from "../elements"
 
 const Projects = ({ projects, title, showLink }) => {
   return (
@@ -12,11 +12,7 @@ const Projects = ({ projects, title, showLink }) => {
           return <Project key={project.id} index={index} {...project} />
         })}
       </ProjectsCenter>
-      {showLink && (
-        <CenterButton href="/projects">
-          Alla projekt
-        </CenterButton>
-      )}
+      {showLink && <CenterButton href="/projects">Alla projekt</CenterButton>}
     </ProjectsSection>
   )
 }

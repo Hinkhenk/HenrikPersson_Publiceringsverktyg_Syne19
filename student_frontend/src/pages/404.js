@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import {ErrorPageWrapper} from "../elements"
-import Button from "../elements"
+import {ErrorPageWrapper, Button} from "../elements"
 
 const Error = () => {
   return (
