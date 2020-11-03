@@ -3,9 +3,9 @@ import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
-// ...GatsbyImageSharpFluid
 
-const Blog = ({
+//The blog page
+export const Blog = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
   },
@@ -13,9 +13,7 @@ const Blog = ({
   return (
     <Layout>
       <SEO title="Bloggen" description="Bloggsidan" />
-      <section className="blog-page">
         <Blogs blogs={blogs} title="Alla artiklar" />
-      </section>
     </Layout>
   )
 }
@@ -40,5 +38,3 @@ export const query = graphql`
     }
   }
 `
-
-export default Blog

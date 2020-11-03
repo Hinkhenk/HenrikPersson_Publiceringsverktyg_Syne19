@@ -2,7 +2,7 @@ import React from "react"
 import Title from "./Title"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
-import { Link } from "gatsby"
+import {ButtonContainer, JobsWrapper, JobsCenter, JobButton, JobInfo, JobDate, JobsDesc, CenterButton} from "../elements"
 
 const query = graphql`
   {
@@ -23,53 +23,49 @@ const query = graphql`
 
 const Jobs = () => {
   const data = useStaticQuery(query)
-  console.log(data)
-  // destructering
   const {
     allStrapiJobs: { nodes: jobs },
   } = data
-  console.log(jobs)
+  //console.log(jobs)
   const [value, setValue] = React.useState(0)
   const { company, position, date, desc } = jobs[value]
-  console.log(company, position, date, desc)
+  //console.log(company, position, date, desc)
 
   return (
-    <section className="section jobs">
+    <JobsWrapper>
       <Title title="erfarenhet" />
-      <div className="jobs-center">
-        {/* btn container */}
-        <div className="btn-container">
+      <JobsCenter>
+        <ButtonContainer>
           {jobs.map((item, index) => {
             return (
-              <button
+              <JobButton
                 key={item.strapiId}
                 onClick={() => setValue(index)}
-                className={`job-btn ${index === value && "active-btn"}`}
+                isActive={index === value && "true"}
               >
                 {item.company}
-              </button>
+              </JobButton>
             )
           })}
-        </div>
-        {/* job info */}
-        <article className="job-info">
+        </ButtonContainer>
+        <JobInfo>
           <h3>{position}</h3>
           <h4>{company}</h4>
-          <p className="job-date">{date}</p>
+          <JobDate>{date}</JobDate>
           {desc.map(item => {
             return (
-              <div key={item.id} className="job-desc">
-                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+              <JobsDesc key={item.id}>
+                <FaAngleDoubleRight classname="job-icon"/>
                 <p>{item.name}</p>
-              </div>
+              </JobsDesc>
             )
           })}
-        </article>
-      </div>
-      <Link to="/about" className="btn center-btn">
+        </JobInfo>
+      </JobsCenter>
+      <CenterButton href="/about">
         Mitt CV
-      </Link>
-    </section>
+      </CenterButton>
+    </JobsWrapper>
   )
 }
 

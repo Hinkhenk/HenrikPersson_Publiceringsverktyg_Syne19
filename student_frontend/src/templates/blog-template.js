@@ -1,26 +1,26 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout"
+import Section from "../components/Section"
+import Container from "../components/Container"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
+import {BlogTemplateWrapper, Button} from "../elements"
 
 const ComponentName = ({ data }) => {
-  console.log(data)
   const { content, title, desc } = data.blog
 
   return (
     <Layout>
       <SEO title={title} description={desc} />
-      <section className="blog-template">
-        <div className="section-center">
-          <article className="blog-content">
+      <Section>
+        <Container>
+          <BlogTemplateWrapper>
             <ReactMarkdown source={content} />
-          </article>
-          <Link to="/blog" className="btn center-btn">
-            Alla artiklar
-          </Link>
-        </div>
-      </section>
+          </BlogTemplateWrapper>
+          <Button href="/blog">Alla artiklar</Button>
+        </Container>
+      </Section>
     </Layout>
   )
 }

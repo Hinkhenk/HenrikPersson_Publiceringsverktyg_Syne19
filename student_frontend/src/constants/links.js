@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import { NavLinks,  SidebarLinks } from "../elements"
+
 const data = [
   {
     id: 1,
@@ -27,7 +29,6 @@ const data = [
     url: "/contact/",
   },
 ]
-
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>
@@ -35,12 +36,10 @@ const tempLinks = data.map(link => {
     </li>
   )
 })
-// I KNOW WE CAN COMBINE IT !!!!!
-
-export default ({ styleClass }) => {
+export default ({ sidebar }) => {
   return (
-    <ul className={`page-links ${styleClass ? styleClass : ""}`}>
-      {tempLinks}
-    </ul>
+    <>
+      {sidebar ? <SidebarLinks>{tempLinks}</SidebarLinks> : <NavLinks>{tempLinks}</NavLinks>}
+    </>
   )
 }
