@@ -32,7 +32,7 @@ export const query = graphql`
       nodes {
         github
         id
-        desc
+        description
         title
         url
         image {

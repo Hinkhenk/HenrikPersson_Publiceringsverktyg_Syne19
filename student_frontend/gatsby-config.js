@@ -8,8 +8,8 @@ module.exports = {
   siteMetadata: {
     title: "WebDev Portfolio",
     description: "This is WebDev Portfolio Site",
-    author: "@Sohail",
-    twitterUsername: "@RajaHasware",
+    author: "@Henrik",
+    twitterUsername: "@MeMAup",
     image: "/twitter-img.png",
     siteUrl: "https://my-amazing-portflio.netlify.app",
   },
