@@ -14,10 +14,10 @@ export const SocialLinksWrapper = styled.ul`
   justify-content: space-between;
   a {
     font-size: 1.75rem;
-    color: ${props => props.theme.color.white};
-    transition: ${props => props.theme.transition};
+    color: #fff;
+    transition: all 0.3s linear;
   }
   a:hover {
-    color: ${props => props.theme.color.primary5};
+    color: #2caeba;
   }
 `

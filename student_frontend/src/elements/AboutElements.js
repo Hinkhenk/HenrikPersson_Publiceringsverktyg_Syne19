@@ -21,11 +21,11 @@ export const AboutArticle = styled.article`
 export const AboutStack = styled.div`
   span {
     display: inline-block;
-    background: ${props => props.theme.color.grey9};
-    color: ${props => props.theme.color.grey5};
+    background: hsl(212, 33%, 89%);
+    color: hsl(210, 22%, 49%);
     margin-right: 0.5rem;
     padding: 0.25rem 0.5rem;
-    border-radius: ${props => props.theme.radius};
+    border-radius: 0.25rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.85rem;

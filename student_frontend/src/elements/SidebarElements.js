@@ -1,4 +1,4 @@
-import styled, {keyframes, css} from "styled-components"
+import styled, { keyframes, css } from "styled-components"
 
 //Animation variables
 const fadeIn = keyframes`
@@ -18,7 +18,7 @@ export const SidebarContainer = styled.div`
   //Because I want a custom div name
 `
 export const SidebarWrapper = styled.aside`
-  background: ${props => props.theme.color.grey10};
+  background: hsl(210, 36%, 96%);
   position: fixed;
   top: 0;
   left: 0;
@@ -27,12 +27,11 @@ export const SidebarWrapper = styled.aside`
   z-index: 999;
   display: grid;
   place-items: center;
-  transition: ${props => props.theme.transition};
+  transition: all 0.3s linear;
 
-  opacity: ${({ isOpen }) => 
-    (isOpen ? "1" : "0")};
+  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
   transform: ${({ isOpen }) =>
-    (isOpen ? "translateX(0)" : "translateX(-100%)")};
+    isOpen ? "translateX(0)" : "translateX(-100%)"};
 
   button {
     position: absolute;
@@ -41,7 +40,7 @@ export const SidebarWrapper = styled.aside`
     font-size: 2.5rem;
     background: transparent;
     border-color: transparent;
-    color: ${props => props.theme.color.redDark};
+    color: hsl(360, 67%, 44%);
     cursor: pointer;
   }
   @media screen and (min-width: 992px) {
@@ -56,16 +55,16 @@ export const SidebarLinks = styled.ul`
     display: block;
     text-align: center;
     text-transform: capitalize;
-    color: ${props => props.theme.color.grey5};
-    letter-spacing: ${props => props.theme.spacing};
+    color: hsl(210, 22%, 49%);
+    letter-spacing: 0.2rem;
     margin-bottom: 0.5rem;
     font-size: 2rem;
-    transition: ${props => props.theme.transition};
-    border-radius: ${props => props.theme.radius};
+    transition: all 0.3s linear;
+    border-radius: 0.25rem;
   }
   li a:hover {
-    background: ${props => props.theme.color.primary9};
-    color: ${props => props.theme.color.primary5};
+    background: hsl(185, 94%, 87%);
+    color: #2caeba;
   }
   li {
     ${slideRight};

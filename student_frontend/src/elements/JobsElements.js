@@ -6,7 +6,7 @@ export const JobsWrapper = styled.section`
 export const JobsCenter = styled.div`
   width: 80vw;
   margin: 0 auto;
-  max-width: ${props => props.theme.width.max};
+  max-width: 1170px;
   @media screen and (min-width: 992px) {
     width: 90vw;
     display: grid;
@@ -29,9 +29,9 @@ export const JobButton = styled.button`
   border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
-  letter-spacing: ${props => props.theme.spacing};
+  letter-spacing: 0.2rem;
   margin: 0 0.5rem;
-  transition: ${props => props.theme.transition};
+  transition: all 0.3s linear;
   cursor: pointer;
   padding: 0.25rem 0;
   line-height: 1;
@@ -39,13 +39,13 @@ export const JobButton = styled.button`
   box-shadow: ${props => props.isActive === "true" && "0 2px #2caeba"};
   &:hover,
   &:focus {
-    color: ${props => props.theme.color.primary5};
-    box-shadow: 0 2px ${props => props.theme.color.primary5};
+    color: #2caeba;
+    box-shadow: 0 2px #2caeba;
   }
   @media screen and (min-width: 992px) {
     margin-bottom: 1rem;
     &:hover {
-      box-shadow: -2px 0 ${props => props.theme.color.primary5};
+      box-shadow: -2px 0 #2caeba;
     }
     box-shadow: ${props => props.isActive === "true" && "-2px 0 #2caeba"};
   }
@@ -56,15 +56,15 @@ export const JobInfo = styled.article`
   }
   h4 {
     text-transform: uppercase;
-    color: ${props => props.theme.color.grey5};
-    background: ${props => props.theme.color.grey9};
+    color: hsl(210, 22%, 49%);
+    background: hsl(212, 33%, 89%);
     display: inline-block;
     padding: 0.375rem 0.75rem;
-    border-radius: ${props => props.theme.radius};
+    border-radius: 0.25rem;
   }
 `
 export const JobDate = styled.p`
-  letter-spacing: ${props => props.theme.spacing};
+  letter-spacing: 0.2rem;
 `
 export const JobDesc = styled.div`
   display: grid;
@@ -74,6 +74,6 @@ export const JobDesc = styled.div`
   margin-bottom: 1.25rem;
   p {
     margin-bottom: 0;
-    color: ${props => props.theme.color.grey3};
+    color: hsl(209, 34%, 30%);
   }
 `

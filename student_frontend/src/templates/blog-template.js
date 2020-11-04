@@ -1,11 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Section from "../components/Section"
-import Container from "../components/Container"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
-import {BlogTemplateWrapper, Button} from "../elements"
+import { BlogTemplateWrapper, Button } from "../elements"
 
 const ComponentName = ({ data }) => {
   const { content, title, desc } = data.blog
@@ -13,14 +11,10 @@ const ComponentName = ({ data }) => {
   return (
     <Layout>
       <SEO title={title} description={desc} />
-      <Section>
-        <Container>
-          <BlogTemplateWrapper>
-            <ReactMarkdown source={content} />
-          </BlogTemplateWrapper>
-          <Button href="/blog">Alla artiklar</Button>
-        </Container>
-      </Section>
+      <BlogTemplateWrapper>
+        <ReactMarkdown source={content} />
+      </BlogTemplateWrapper>
+      <Button href="/blog">Alla artiklar</Button>
     </Layout>
   )
 }

@@ -16,7 +16,7 @@ export const NavbarWrapper = styled.nav`
   display: flex;
   align-items: center;
   z-index: 200;
-  background: ${props => props.theme.color.white};
+  background: #fff;
 `
 export const NavCenter = styled.div`
   width: 90vw;
@@ -32,11 +32,11 @@ export const ToggleButton = styled.button`
   font-size: 2rem;
   background: transparent;
   border-color: transparent;
-  color: ${props => props.theme.color.primary5};
-  transition: ${props => props.theme.transition};
+  color: #2caeba;
+  transition: all 0.3s linear;
   cursor: pointer;
   &:hover {
-    color: ${props => props.theme.color.primary2};
+    color: hsl(185, 84%, 25%);
   }
   @media screen and (min-width: 768px) {
     display: none;
@@ -53,15 +53,15 @@ export const NavLinks = styled.ul`
     }
     a {
       text-transform: capitalize;
-      color: ${props => props.theme.color.grey1};
+      color: hsl(209, 61%, 16%);
       font-weight: bold;
-      letter-spacing: ${props => props.theme.spacing};
-      transition: ${props => props.theme.transition};
+      letter-spacing: 0.2rem;
+      transition: all 0.3s linear;
       padding: 0.5rem 0;
     }
     a:hover {
-      color: ${props => props.theme.color.primary5};
-      box-shadow: 0px 2px ${props => props.theme.color.primary5};
+      color: #2caeba;
+      box-shadow: 0px 2px #2caeba;
     }
   }
 `

@@ -1,19 +1,19 @@
 import styled from "styled-components"
 
 export const ContactFormWrapper = styled.article`
-  background: ${props => props.theme.color.white};
-  border-radius: ${props => props.theme.radius};
+  background: #fff;
+  border-radius: 0.25rem;
   text-align: center;
-  box-shadow: ${props => props.theme.shadows.light};
-  transition: ${props => props.theme.transition};
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s linear;
   width: 90vw;
   max-width: 35rem;
   &:hover {
-    box-shadow: ${props => props.theme.shadows.dark};
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
   h3 {
     padding-top: 1.25rem;
-    color: ${props => props.theme.color.grey5};
+    color: hsl(210, 22%, 49%);
   }
 `
 export const ContactFormGroup = styled.div`
@@ -25,15 +25,15 @@ export const ContactInput = styled.input`
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: ${props => props.theme.color.grey10};
-  border-radius: ${props => props.theme.radius};
+  background: hsl(210, 36%, 96%);
+  border-radius: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: ${props => props.theme.spacing};
+  letter-spacing: 0.2rem;
   ::placeholder {
-    font-family: ${props => props.theme.font.primary};
-    color: ${props => props.theme.color.grey1};
+    font-family: Roboto, sans-serif;
+    color: hsl(209, 61%, 16%);
     text-transform: uppercase;
-    letter-spacing: ${props => props.theme.spacing};
+    letter-spacing: 0.2rem;
   }
 `
 export const ContactInputText = styled.textarea`
@@ -42,14 +42,14 @@ export const ContactInputText = styled.textarea`
   padding: 0.75rem 1rem;
   border: none;
   margin-bottom: 1.25rem;
-  background: ${props => props.theme.color.grey10};
-  border-radius: ${props => props.theme.radius};
+  background: hsl(210, 36%, 96%);
+  border-radius: 0.25rem;
   text-transform: uppercase;
-  letter-spacing: ${props => props.theme.spacing};
+  letter-spacing: 0.2rem;
   ::placeholder {
-    font-family: ${props => props.theme.font.primary};
-    color: ${props => props.theme.color.grey1};
+    font-family: Roboto, sans-serif;
+    color: hsl(209, 61%, 16%);
     text-transform: uppercase;
-    letter-spacing: ${props => props.theme.spacing};
+    letter-spacing: 0.2rem;
   }
 `

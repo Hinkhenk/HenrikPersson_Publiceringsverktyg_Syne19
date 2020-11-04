@@ -3,7 +3,7 @@ import Image from "gatsby-image"
 
 export const HeroImage = styled(Image)`
   display: none;
-  
+
   @media screen and (min-width: 992px) {
     display: block;
     grid-row: 1/1;
@@ -11,8 +11,8 @@ export const HeroImage = styled(Image)`
   }
 `
 export const BlogImage = styled(Image)`
-  border-top-left-radius: ${props => props.theme.radius};
-  border-top-right-radius: ${props => props.theme.radius};
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   height: 15rem;
   @media screen and (min-width: 576px) {
     height: 17.5rem;
@@ -30,8 +30,8 @@ export const AboutImage = styled(Image)`
   }
 `
 export const ProjectImage = styled(Image)`
-  border-top-left-radius: ${props => props.theme.radius};
-  border-top-right-radius: ${props => props.theme.radius};
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
   height: 19rem;
   z-index: 1;
   &:after {
@@ -41,13 +41,9 @@ export const ProjectImage = styled(Image)`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      to bottom right,
-      ${props => props.theme.color.primary5},
-      #222
-    );
+    background: linear-gradient(to bottom right, #2caeba, #222);
     opacity: 0.85;
-    transition: ${props => props.theme.transition};
+    transition: all 0.3s linear;
   }
   @media screen and (min-width: 576px) {
     height: 19rem;
@@ -59,7 +55,7 @@ export const ProjectImage = styled(Image)`
     grid-column: 1 / span 8;
     grid-row: 1 / 1;
     height: 30rem;
-    border-radius: ${props => props.theme.radius};
-    box-shadow: ${props => props.theme.shadows.dark};
+    border-radius: 0.25rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 `
