@@ -12,7 +12,7 @@ export const NavbarWrapper = styled.nav`
   top: 0;
   left: 0;
   width: 100%;
-  height: 5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   z-index: 200;

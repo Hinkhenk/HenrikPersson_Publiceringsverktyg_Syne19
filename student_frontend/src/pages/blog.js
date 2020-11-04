@@ -6,7 +6,7 @@ import SEO from "../components/SEO"
 import { BlogPageWrapper } from "../elements"
 
 //The blog page
-export const Blog = ({
+const Blog = ({
   data: {
     allStrapiBlogs: { nodes: blogs },
   },
@@ -41,3 +41,4 @@ export const query = graphql`
     }
   }
 `
+export default Blog
