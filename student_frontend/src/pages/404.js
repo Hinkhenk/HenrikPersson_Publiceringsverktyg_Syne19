@@ -7,7 +7,7 @@ const Error = () => {
     <Layout>
       <ErrorPageWrapper>
         <div>
-          <h1>Oj, Något gick fel</h1>
+          <h1>Oj, Något gick fel!</h1>
           <Button href="/">Tillbaka Hem</Button>
         </div>
       </ErrorPageWrapper>
