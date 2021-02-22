@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import ReactMarkdown from "react-markdown"
 import SEO from "../components/SEO"
-import { BlogTemplateWrapper, Button } from "../elements"
+import { BlogTemplateWrapper, BlogTemplateCenter,Button } from "../elements"
 
 const ComponentName = ({ data }) => {
   const { content, title, desc } = data.blog
@@ -12,9 +12,13 @@ const ComponentName = ({ data }) => {
     <Layout>
       <SEO title={title} description={desc} />
       <BlogTemplateWrapper>
-        <ReactMarkdown source={content} />
+        <BlogTemplateCenter>
+          <article>
+          <ReactMarkdown source={content} />
+          </article>
+          <Button href="/blog">Alla artiklar</Button>
+        </BlogTemplateCenter>
       </BlogTemplateWrapper>
-      <Button href="/blog">Alla artiklar</Button>
     </Layout>
   )
 }
